@@ -1,10 +1,9 @@
 <div class="main">
   <div class="inner">
-    <div class="user__wrapper">
-    <% @prototypes.each do |prototype| %>
-      <h2 class="page-heading">
-        <%= "#{@user.name}さんの情報"%>
-      </h2>
+     <div class="user__wrapper">
+       <h2 class="page-heading">
+         <%= "#{@user.name}さんの情報"%>
+        </h2>
       <table class="table">
         <tbody>
           <tr>
@@ -28,11 +27,12 @@
       <h2 class="page-heading">
         <%= "#{@user.name}さんのプロトタイプ"%>
       </h2>
-      <div class="user__card">
-        <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>
-        <%= render @prototypes %>
-      </div>
-    <% end %>
+      <% @prototypes.each do |prototype| %>
+        <div class="user__card">
+          <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>
+          <%= render prototype %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
