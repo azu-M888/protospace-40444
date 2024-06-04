@@ -1,7 +1,6 @@
 <div class="main">
   <div class="inner">
     <div class="user__wrapper">
-    <% @prototypes.each do |prototype| %>
       <h2 class="page-heading">
         <%= "#{@user.name}さんの情報"%>
       </h2>
@@ -32,7 +31,6 @@
         <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>
         <%= render @prototypes %>
       </div>
-    <% end %>
     </div>
   </div>
 </div>
